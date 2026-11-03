@@ -1,5 +1,5 @@
 import {leaderboardMarkup, mountLeaderboard} from './leaderboard.js?v=18';
-import {RESULT_DATA as DATA} from './results-data.js?v=18';
+import {RESULT_DATA as DATA} from './results-data.js?v=19';
 import {mountPaperCharts} from './paper-charts.js';
 
 const format = (value, places = 2) => Number(value).toLocaleString('en-US', {minimumFractionDigits: places, maximumFractionDigits: places});
@@ -9,7 +9,7 @@ function acquisition() {
   const metrics=[
     {key:'success',title:'Success rate',unit:'%',max:100,ticks:[0,25,50,75,100],color:'#8c0000',text:'All seven tasks with agent-free solutions reached <strong>91.67–100% recorded development success</strong>. These rates pool attempts across program revisions; they do not measure a single frozen policy.'},
     {key:'hours',title:'Exploration time (h)',unit:'hours',max:50,ticks:[0,10,20,30,40,50],color:'#5b7f9f',text:'Time to first complete success ranged from <strong>about 1.5 to 45 hours</strong>. Acquisition cost varied substantially across tasks, with Push T requiring the longest exploration.'},
-    {key:'seconds',title:'Execution time (s)',unit:'seconds',max:1200,ticks:[0,300,600,900,1200],color:'#a67538',text:'The acquired programs execute with <strong>live perception and control, without runtime language-model calls</strong>. Bars show successful-run medians; task-specific endpoints include reset for tic-tac-toe, stacking and Hanoi.'}
+    {key:'seconds',title:'Execution time (s)',unit:'seconds',max:1200,ticks:[0,300,600,900,1200],color:'#a67538',text:'The acquired programs execute with <strong>live perception and control, without runtime language-model calls</strong>. Bars show successful-run medians, using the final versions shown below for tic-tac-toe, stacking and Hanoi; these three tasks include reset.'}
   ];
   return `<article class="rs-story rs-acquisition" id="result-acquisition">
     ${heading('Real world performance')}
