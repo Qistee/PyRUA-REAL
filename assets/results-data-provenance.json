@@ -212,25 +212,5 @@
       }
     },
     "cycleIQR": "Stacking Figure 6d IQR is available for all 33 batches; see results-stacking-iqr-provenance.json."
-  },
-  "executionTimeDisplayOverrides": {
-    "reason": "Use the final versions from Continued improvement, as requested by the user. Other tasks retain their existing medians. Historical IQR values in task records are not rendered and are not estimates for these final versions.",
-    "tasks": {
-      "five-block-stacking": {
-        "seconds": 156.0,
-        "source": "Final cycle-time point in Continued improvement",
-        "version": 33
-      },
-      "tic-tac-toe": {
-        "seconds": 535.0,
-        "source": "Final cycle-time point in Continued improvement",
-        "version": 9
-      },
-      "tower-of-hanoi": {
-        "seconds": 793.0,
-        "source": "Final cycle-time point in Continued improvement",
-        "version": 7
-      }
-    }
   }
 }
