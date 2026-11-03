@@ -18,7 +18,7 @@ function acquisition() {
       <figcaption><h4>${metric.title}</h4>${metric.key==='seconds'?'<p class="rs-agent-time-note">Methods involving online agents can take over 10× as long. <a href="assets/paper.pdf#page=16" target="_blank" rel="noopener">See paper, §4.8.</a></p>':''}</figcaption>
       <div class="rs-vertical-chart">${metric.key==='success'?'<span class="rs-axis-unit">%</span>':''}
         <div class="rs-gridlines" aria-hidden="true">${metric.ticks.map(value=>`<div style="bottom:${value/metric.max*100}%"><span>${value.toLocaleString('en-US')}</span></div>`).join('')}</div>
-        <div class="rs-columns">${DATA.tasks.map((task,i)=>`<div class="rs-column" style="--bar-size:${task[metric.key]/metric.max*100}%;--delay:${i*75}ms" aria-label="${task.name}: ${task[metric.key]} ${metric.unit}"><div class="rs-column-plot"><strong>${metric.key==='hours'?'~':''}${metric.key==='hours'?task.hours:format(task[metric.key])}</strong><i></i></div><span class="rs-column-name">${shortNames[task.id]}</span></div>`).join('')}</div>
+        <div class="rs-columns">${DATA.tasks.map((task,i)=>`<div class="rs-column" data-task="${task.id}" style="--bar-size:${task[metric.key]/metric.max*100}%;--delay:${i*75}ms" aria-label="${task.name}: ${task[metric.key]} ${metric.unit}"><div class="rs-column-plot"><strong>${metric.key==='hours'?'~':''}${metric.key==='hours'?task.hours:format(task[metric.key])}</strong><i></i></div><span class="rs-column-name">${shortNames[task.id]}</span></div>`).join('')}</div>
       </div>
       <p class="rs-result-copy">${metric.text}</p><p class="rs-task-footnote">* Ethernet insertion uses online agent assistance.${metric.key==='hours'?' The ~15 h are additional exploration after 240 h without agent-free success.':''}</p>
     </figure>`).join('')}</div>
@@ -39,7 +39,7 @@ function improvement() {
 
 function benchmark() {
   return `<article class="rs-story rs-benchmark" id="result-benchmark">
-    ${heading('RoboDojo')}
+    ${heading('RoboDojo performance')}
     ${leaderboardMarkup()}
     <p class="rs-result-copy">Fixed programs reach <strong>84.42% success and 88.53 score</strong> across 42 tasks (54 configurations; 2,100 episodes), with no language-model calls at evaluation time. These are development-seed results; the same programs achieve <strong>80.73% / 85.36 on held-out seed 2</strong>. The comparison uses separately reported evaluations, with five capability groups weighted equally.</p>
   </article>`;
