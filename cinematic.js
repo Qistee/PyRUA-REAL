@@ -10,7 +10,7 @@ export function mountCinematic(root, items = [], reel = []) {
   const openingVideo=root.querySelector('[data-opening-video]');
   const sticky=root.querySelector('.cin-sticky')||make('div','cin-sticky'),field=make('div','cin-field'),overlay=make('div','cin-overlay');
   const identity=make('div','cin-identity');
-  identity.innerHTML='<div class="cin-wordmark">PyRUA-REAL:</div><div class="cin-subtitle"><span class="real-initial">R</span>obot <span class="real-initial">E</span>xploration and <span class="real-initial">A</span>daptive <span class="real-initial">L</span>earning through RSI in the Real-World</div>';
+  identity.innerHTML='<div class="cin-wordmark">PyRUA-REAL:</div><div class="cin-subtitle"><span class="real-initial">R</span>obot <span class="real-initial">E</span>xploration and <span class="real-initial">A</span>daptive <span class="real-initial">L</span>earning through RSI in the Real World</div>';
   const down=make('button','cin-down');down.type='button';
   overlay.append(identity,down);sticky.append(field,overlay);root.classList.add('cin-stage');if(sticky.parentElement!==root)root.replaceChildren(sticky);
   function videoFor(item){

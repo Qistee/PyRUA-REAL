@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#8c0000">
   <title>PyRUA-REAL: Robot Exploration and Adaptive Learning</title>
-  <meta name="description" content="Robot Exploration and Adaptive Learning through RSI in the Real-World. Research from Peking University and National University of Singapore.">
+  <meta name="description" content="Robot Exploration and Adaptive Learning through RSI in the Real World. Research from Peking University and National University of Singapore.">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="cinematic.css?v=19">
@@ -48,12 +48,12 @@
       }, {once:true});
     })();
   </script>
-  <script type="module" src="app.js?v=29"></script>
+  <script type="module" src="app.js?v=30"></script>
 </head>
 <body>
   <a class="skip-link" href="#paper">Skip introduction</a>
   <main id="top">
-    <section id="cinematic" class="cin-stage" aria-label="Real-world robot tasks"><div class="cin-sticky"><video data-opening-video class="cin-video" muted playsinline preload="none" poster="media/tic-1.jpg?v=15" src="media/tic-1.mp4?v=15" aria-hidden="true" tabindex="-1"></video></div></section>
+    <section id="cinematic" class="cin-stage" aria-label="Real world robot tasks"><div class="cin-sticky"><video data-opening-video class="cin-video" muted playsinline preload="none" poster="media/tic-1.jpg?v=15" src="media/tic-1.mp4?v=15" aria-hidden="true" tabindex="-1"></video></div></section>
     <script>
       // Start the first clip without waiting for the gallery/chart module graph.
       if ((!location.hash || location.hash === '#top') && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
@@ -65,11 +65,11 @@
       }
     </script>
     <button class="contents-toggle" type="button" aria-label="Open contents" aria-controls="section-nav" aria-expanded="false">☰</button>
-    <nav class="section-nav" id="section-nav" aria-label="Sections"><a class="nav-brand" href="#top">PyRUA<span>-REAL</span></a><span class="nav-caption">CONTENTS</span><div><a href="#abstract">Abstract</a><a href="#structure">Structure</a><a href="#performance">Task videos</a><a href="#real-world-charts">Real-world performance</a><a href="#result-improvement">Continued improvement</a><a href="#result-benchmark">RoboDojo</a><a href="#other-findings">Further findings</a></div><a class="nav-paper" href="assets/paper.pdf" target="_blank" rel="noopener">Paper ↗</a></nav>
+    <nav class="section-nav" id="section-nav" aria-label="Sections"><a class="nav-brand" href="#top">PyRUA<span>-REAL</span></a><span class="nav-caption">CONTENTS</span><div><a href="#abstract">Abstract</a><a href="#structure">Structure</a><a href="#performance">Task videos</a><a href="#real-world-charts">Real world performance</a><a href="#result-improvement">Continued improvement</a><a href="#result-benchmark">RoboDojo</a><a href="#other-findings">Further findings</a></div><a class="nav-paper" href="assets/paper.pdf" target="_blank" rel="noopener">Paper ↗</a></nav>
     <div class="article-body">
     <header class="paper-header wrap" id="paper">
       <div class="paper-brand"><span>PyRUA</span>-REAL</div>
-      <h1><span class="real-initial">R</span>obot <span class="real-initial">E</span>xploration and <span class="real-initial">A</span>daptive <span class="real-initial">L</span>earning<br class="desktop-break"> through RSI in the Real-World</h1>
+      <h1><span class="real-initial">R</span>obot <span class="real-initial">E</span>xploration and <span class="real-initial">A</span>daptive <span class="real-initial">L</span>earning<br class="desktop-break"> through RSI in the Real World</h1>
       <div class="authors">
         <span><a href="https://qistee.github.io/" target="_blank" rel="noopener">Qiang Wang</a><sup>*1</sup></span><span><a href="https://jxbi1010.github.io/" target="_blank" rel="noopener">Jianxin Bi</a><sup>*1,2</sup></span><span><a href="https://github.com/shu1ong" target="_blank" rel="noopener">Shulong Jiang</a><sup>*1</sup></span><span aria-label="Additional authors to be confirmed">…</span><span><a href="https://zhoudaquan.github.io/homepage.io/index.html" target="_blank" rel="noopener">Daquan Zhou</a><sup>1†</sup></span>
       </div>
@@ -87,19 +87,19 @@
 
     <section class="abstract-section section wrap" id="abstract">
       <h2>Abstract</h2>
-      <p>Coding agents such as GPT-6-Astra empowers spatial reasoning with executable robot behavior, raising the question of how coding agent can produce lasting improvements in robot capabilities from physical interaction. In this work, we study <strong>embodied recursive self-improvement (RSI)</strong> through real-world exploration, code improvement, and deployment using PyRUA-REAL. Within this framework, coding agents retain interaction experience as <strong>persistent memory and reusable executable skills</strong> to inform subsequent exploration and improvements. Our empirical study places physical manipulation at the center of the improvement process, examining how agents collaborate, what kind of execution feedback supports effective code improvement, and how task specifications and previously acquired skills influence robustness and task transfer. We further investigate the efficiency and capability of deploying the resulting programs without online agent decisions. Across eight real-world tasks, recorded development success averages <strong>91.1%</strong> across tasks. Complementary RoboDojo evaluation with PyRUA-RSI frozen programs achieves <strong>84.42% capability-averaged success</strong> on the development seed and <strong>80.73% on held-out seed 2</strong>, without language-model calls at evaluation time. This study provides empirical guidance for turning physical exploration into reusable robot skills that support continued improvement and robust, efficient deployment.</p>
+      <p>Coding agents such as GPT-6-Astra empowers spatial reasoning with executable robot behavior, raising the question of how coding agent can produce lasting improvements in robot capabilities from physical interaction. In this work, we study <strong>embodied recursive self-improvement (RSI)</strong> through real world exploration, code improvement, and deployment using PyRUA-REAL. Within this framework, coding agents retain interaction experience as <strong>persistent memory and reusable executable skills</strong> to inform subsequent exploration and improvements. Our empirical study places physical manipulation at the center of the improvement process, examining how agents collaborate, what kind of execution feedback supports effective code improvement, and how task specifications and previously acquired skills influence robustness and task transfer. We further investigate the efficiency and capability of deploying the resulting programs without online agent decisions. Across eight real world tasks, recorded development success averages <strong>91.1%</strong> across tasks. Complementary RoboDojo evaluation with PyRUA-RSI frozen programs achieves <strong>84.42% capability-averaged success</strong> on the development seed and <strong>80.73% on held-out seed 2</strong>, without language-model calls at evaluation time. This study provides empirical guidance for turning physical exploration into reusable robot skills that support continued improvement and robust, efficient deployment.</p>
     </section>
 
 
 
     <figure class="teaser-figure wrap" aria-label="PyRUA-REAL research overview">
       <a href="assets/pyrua-real-teaser-84.42.pdf" target="_blank" rel="noopener" aria-label="Open the research overview as a full-resolution PDF">
-        <img src="assets/pyrua-real-teaser-84.42.png" width="3026" height="1878" loading="lazy" decoding="async" alt="PyRUA-REAL overview: embodied RSI, iterative program improvement, real-world task success, RoboDojo performance at 84.42%, and eight real-world tasks.">
+        <img src="assets/pyrua-real-teaser-84.42.png" width="3026" height="1878" loading="lazy" decoding="async" alt="PyRUA-REAL overview: embodied RSI, iterative program improvement, real world task success, RoboDojo performance at 84.42%, and eight real world tasks.">
       </a>
     </figure>
 
     <section class="structure-section section" id="structure"><div class="wrap"><h2>Structure</h2><div id="structure-diagram"></div></div></section>
-    <section class="result-section section wrap" id="result"><h2>Result</h2><div id="results-visualization" class="rs-root"><article class="rs-story rs-acquisition" id="result-acquisition"><header class="rs-heading"><h3 class="rs-label">Real-world performance</h3></header><div data-performance-slot><section class="rs-performance" id="performance" aria-label="Complete task recordings">
+    <section class="result-section section wrap" id="result"><h2>Result</h2><div id="results-visualization" class="rs-root"><article class="rs-story rs-acquisition" id="result-acquisition"><header class="rs-heading"><h3 class="rs-label">Real world performance</h3></header><div data-performance-slot><section class="rs-performance" id="performance" aria-label="Complete task recordings">
       <div class="section-heading"><div class="segmented domain-tabs" role="group" aria-label="Demonstration environment"><button type="button" class="active" data-domain="real" aria-pressed="true">Real world</button><button type="button" data-domain="sim" aria-pressed="false">Simulation</button></div></div>
       <div class="gallery-toolbar"><div><button type="button" class="gallery-code-toggle" role="switch" aria-checked="true" aria-label="Show code"><span>Code</span><span class="gallery-switch-track" aria-hidden="true"><span class="gallery-switch-thumb"></span></span></button></div></div>
       <div class="task-video-grid" id="task-video-grid"></div>

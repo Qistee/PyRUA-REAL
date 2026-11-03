@@ -1,7 +1,7 @@
 import {MEDIA,CINEMATIC,HERO_CLIPS} from './media.js?v=20';
-import {mountCinematic} from './cinematic.js?v=23';
+import {mountCinematic} from './cinematic.js?v=24';
 import {mountStructure} from './structure.js';
-import {mountResults} from './results.js?v=23';
+import {mountResults} from './results.js?v=24';
 import {mountGallery} from './gallery.js?v=24';
 const $=(selector,root=document)=>root.querySelector(selector);
 const $$=(selector,root=document)=>[...root.querySelectorAll(selector)];

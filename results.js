@@ -12,7 +12,7 @@ function acquisition() {
     {key:'seconds',title:'Execution time (s)',unit:'seconds',max:1200,ticks:[0,300,600,900,1200],color:'#a67538',text:'The acquired programs execute with <strong>live perception and control, without runtime language-model calls</strong>. Bars show successful-run medians; task-specific endpoints include reset for tic-tac-toe, stacking and Hanoi.'}
   ];
   return `<article class="rs-story rs-acquisition" id="result-acquisition">
-    ${heading('Real-world performance')}
+    ${heading('Real world performance')}
     <div data-performance-slot></div>
     <div class="rs-metrics" id="real-world-charts">${metrics.map(metric=>`<figure class="rs-bar-chart" style="--bar-color:${metric.color}" aria-label="${metric.title}">
       <figcaption><h4>${metric.title}</h4>${metric.key==='seconds'?'<p class="rs-agent-time-note">Methods involving online agents can take over 10× as long. <a href="assets/paper.pdf#page=16" target="_blank" rel="noopener">See paper, §4.8.</a></p>':''}</figcaption>
