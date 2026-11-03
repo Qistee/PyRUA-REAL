@@ -2,7 +2,7 @@ import {MEDIA,CINEMATIC,HERO_CLIPS} from './media.js?v=19';
 import {mountCinematic} from './cinematic.js?v=23';
 import {mountStructure} from './structure.js';
 import {mountResults} from './results.js?v=21';
-import {mountGallery} from './gallery.js?v=22';
+import {mountGallery} from './gallery.js?v=23';
 const $=(selector,root=document)=>root.querySelector(selector);
 const $$=(selector,root=document)=>[...root.querySelectorAll(selector)];
 mountResults($('#results-visualization'));

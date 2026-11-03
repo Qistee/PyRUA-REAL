@@ -1,4 +1,3 @@
-import {rangeLoader} from './range-loader.js';
 /** Full-frame recordings, visible-card playback, and evidence-backed code captions. */
 export function mountGallery(root, media){
   const grid=root.querySelector('#task-video-grid'),reduced=matchMedia('(prefers-reduced-motion: reduce)');
@@ -53,9 +52,10 @@ export function mountGallery(root, media){
       if(!source){frame.classList.add('gallery-pending');frame.append(make('span','','Recording forthcoming'));return;}
       const video=make('video','gallery-video');Object.assign(video,{muted:true,defaultMuted:true,playsInline:true,loop:!item.startAt,preload:'none',playbackRate:item.playbackRate||8});video.setAttribute('aria-label',domain==='sim'?`${item.title} recorded rollout, original playback rate`:`${item.title} ${item.trimmed?"recording with shortened leading idle":"complete recording"}, eight times speed`);video.setAttribute('muted','');video.setAttribute('playsinline','');card.video=video;if(item.videoPoster)video.poster=item.videoPoster;frame.append(video);
       card.source=source;card.hlsNeeded=source.includes('.m3u8');
-      card.prepareHls=async()=>{const {default:Hls,LoadStats}=await import('./vendor/hls.light.mjs?v=22');if(!cards.includes(card))return;
+      card.prepareHls=async()=>{const {default:Hls}=await import('./vendor/hls.light.mjs?v=22');if(!cards.includes(card))return;
       if(Hls.isSupported()){
-        card.hls=new Hls({startPosition:item.startAt||-1,autoStartLoad:false,enableWorker:false,fLoader:rangeLoader(LoadStats),maxBufferLength:6,maxMaxBufferLength:12,maxBufferSize:32000000,backBufferLength:4});
+        // Use the built-in loader: one request per HLS segment, with standard timeout/retry handling.
+        card.hls=new Hls({startPosition:item.startAt||-1,autoStartLoad:false,enableWorker:false,maxBufferLength:6,maxMaxBufferLength:12,maxBufferSize:32000000,backBufferLength:4});
         card.source=source;card.hls.attachMedia(video);
         for(const event of [Hls.Events.MANIFEST_LOADING,Hls.Events.MANIFEST_LOADED,Hls.Events.FRAG_LOADING,Hls.Events.FRAG_LOADED,Hls.Events.BUFFER_APPENDED])card.hls.on(event,(_,data)=>{frame.dataset.streamPhase=event;if(data.frag)frame.dataset.streamSegment=String(data.frag.sn);});
         card.hls.on(Hls.Events.MANIFEST_PARSED,()=>{card.hlsReady=true;sync(card);});
