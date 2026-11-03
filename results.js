@@ -29,9 +29,9 @@ function improvement() {
   return `<article class="rs-story rs-improvement" id="result-improvement">
     ${heading('Continued improvement')}
     <div class="rs-paper-charts">
-      <figure class="rs-animated-figure" data-chart-src="assets/improvement-stacking-animated.svg"><img src="assets/improvement-stacking.webp" width="846" height="1578" decoding="async" alt="Five-block stacking: original success-rate and cycle-time charts across 33 program revisions." loading="lazy"></figure>
-      <figure class="rs-animated-figure" data-chart-src="assets/improvement-tic-animated.svg"><img src="assets/improvement-tic-tac-toe.webp" width="846" height="1578" decoding="async" alt="Tic-tac-toe: original success-rate and cycle-time charts across nine program revisions." loading="lazy"></figure>
-      <figure class="rs-animated-figure" data-chart-src="assets/improvement-hanoi-animated.svg"><img src="assets/improvement-hanoi.webp" width="846" height="1578" decoding="async" alt="Tower of Hanoi: original success-rate and cycle-time charts across seven program revisions." loading="lazy"></figure>
+      <figure class="rs-animated-figure" data-chart-src="assets/improvement-stacking-animated.svg?v=2"><img src="assets/improvement-stacking.webp?v=2" width="846" height="1578" decoding="async" alt="Five-block stacking: original success-rate and execution-time charts across 33 program revisions." loading="lazy"></figure>
+      <figure class="rs-animated-figure" data-chart-src="assets/improvement-tic-animated.svg?v=2"><img src="assets/improvement-tic-tac-toe.webp?v=2" width="846" height="1578" decoding="async" alt="Tic-tac-toe: original success-rate and execution-time charts across nine program revisions." loading="lazy"></figure>
+      <figure class="rs-animated-figure" data-chart-src="assets/improvement-hanoi-animated.svg?v=2"><img src="assets/improvement-hanoi.webp?v=2" width="846" height="1578" decoding="async" alt="Tower of Hanoi: original success-rate and execution-time charts across seven program revisions." loading="lazy"></figure>
     </div>
     <p class="rs-result-copy">Improvement continues <strong>beyond the first successful rollout</strong>. Stacking cycle time falls from 285.3 to 156.0 seconds, while tic-tac-toe and Hanoi also become faster through revised motion strategies. Intermediate regressions show why speed must be checked alongside reliability.</p>
   </article>`;
