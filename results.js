@@ -47,11 +47,11 @@ function benchmark() {
 
 function findings(){
  const findings=[
-  ['Extra reviewers substantially slow exploration without improving outcomes.', '4.4', 11],
-  ['Assign technical planning and hands-on exploration to separate agents.', '4.4', 12],
-  ['Image-based feedback enables the fastest, most effective exploration.', '4.5', 13],
+  ['Extra reviewer agents substantially slow exploration without improving outcomes.', '4.4', 11],
+  ['Assign research investigation and physical exploration to separate agents.', '4.4', 12],
+  ['Image-based feedback enables most effective exploration and self-improvement.', '4.5', 13],
   ['Explicit numerical requirements deliver the greatest generalization gains.', '4.6', 13],
-  ['Cross-task experience transfer improves performance on new tasks.', '4.7', 14]
+  ['Cross-task experience positively transfer to new tasks.', '4.7', 14]
  ];
  return `<article class="rs-story rs-findings" id="other-findings">${heading('Further findings')}<div class="rs-finding-grid">${findings.map(([copy,section,page])=>`<article class="rs-finding-card"><p>${copy} <a href="assets/paper.pdf#page=${page}" target="_blank" rel="noopener">See paper, §${section}.</a></p></article>`).join('')}</div></article>`;
 }
