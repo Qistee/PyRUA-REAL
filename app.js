@@ -1,4 +1,4 @@
-import {MEDIA,CINEMATIC,HERO_CLIPS} from './media.js?v=19';
+import {MEDIA,CINEMATIC,HERO_CLIPS} from './media.js?v=20';
 import {mountCinematic} from './cinematic.js?v=23';
 import {mountStructure} from './structure.js';
 import {mountResults} from './results.js?v=21';

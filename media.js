@@ -217,18 +217,19 @@ export const MEDIA = {
   ],
   "sim": [
     {
-      "id": "insert-key",
-      "title": "Insert key",
-      "property": "Precision",
+      "id": "classify-objects",
+      "title": "Classify objects",
+      "property": "",
       "sources": [
-        "simulation/insert-key-history.mp4",
+        "simulation/classify-objects-complete.mp4",
         null,
         null
       ],
       "trace": null,
-      "poster": "simulation/insert-key-history.jpg",
-      "videoPoster": "simulation/insert-key-history.jpg",
+      "poster": "simulation/classify-objects-complete.jpg",
+      "videoPoster": "simulation/classify-objects-complete.jpg",
       "playbackRate": 1,
+      "recordingNote": "Successful complete trajectory",
       "cameraNames": [
         "HEAD",
         "LEFT WRIST",
@@ -236,18 +237,19 @@ export const MEDIA = {
       ]
     },
     {
-      "id": "organize-table",
-      "title": "Organize table",
-      "property": "Long-horizon",
+      "id": "deposit-coin",
+      "title": "Deposit coin",
+      "property": "",
       "sources": [
-        "simulation/organize-table-history.mp4",
+        "simulation/deposit-coin-complete.mp4",
         null,
         null
       ],
       "trace": null,
-      "poster": "simulation/organize-table-history.jpg",
-      "videoPoster": "simulation/organize-table-history.jpg",
+      "poster": "simulation/deposit-coin-complete.jpg",
+      "videoPoster": "simulation/deposit-coin-complete.jpg",
       "playbackRate": 1,
+      "recordingNote": "Successful complete trajectory",
       "cameraNames": [
         "HEAD",
         "LEFT WRIST",
@@ -255,19 +257,19 @@ export const MEDIA = {
       ]
     },
     {
-      "id": "swap-blocks",
-      "title": "Swap blocks",
-      "property": "Memory",
+      "id": "stack-blocks",
+      "title": "Stack blocks",
+      "property": "",
       "sources": [
-        "simulation/swap-blocks-head.mp4",
-        "simulation/swap-blocks-left_wrist.mp4",
-        "simulation/swap-blocks-right_wrist.mp4"
+        "simulation/stack-blocks-complete.mp4",
+        null,
+        null
       ],
       "trace": null,
-      "poster": "simulation/swap-blocks-poster.jpg",
-      "videoPoster": "simulation/swap-blocks-poster.jpg",
+      "poster": "simulation/stack-blocks-complete.jpg",
+      "videoPoster": "simulation/stack-blocks-complete.jpg",
       "playbackRate": 1,
-      "recordingNote": "PyRUA-RSI \u00b7 successful rollout",
+      "recordingNote": "Successful complete trajectory",
       "cameraNames": [
         "HEAD",
         "LEFT WRIST",
@@ -275,19 +277,99 @@ export const MEDIA = {
       ]
     },
     {
-      "id": "solve-equation",
-      "title": "Solve equation",
-      "property": "Open tasks",
+      "id": "imitate-sorting-sequence",
+      "title": "Imitate sorting sequence",
+      "property": "",
       "sources": [
-        "simulation/solve-equation-head.mp4",
-        "simulation/solve-equation-left_wrist.mp4",
-        "simulation/solve-equation-right_wrist.mp4"
+        "simulation/imitate-sorting-sequence-complete.mp4",
+        null,
+        null
       ],
       "trace": null,
-      "poster": "simulation/solve-equation-poster.jpg",
-      "videoPoster": "simulation/solve-equation-poster.jpg",
+      "poster": "simulation/imitate-sorting-sequence-complete.jpg",
+      "videoPoster": "simulation/imitate-sorting-sequence-complete.jpg",
       "playbackRate": 1,
-      "recordingNote": "PyRUA-RSI \u00b7 successful rollout",
+      "recordingNote": "Successful complete trajectory",
+      "cameraNames": [
+        "HEAD",
+        "LEFT WRIST",
+        "RIGHT WRIST"
+      ]
+    },
+    {
+      "id": "play-stacking-toy",
+      "title": "Play stacking toy",
+      "property": "",
+      "sources": [
+        "simulation/play-stacking-toy-complete.mp4",
+        null,
+        null
+      ],
+      "trace": null,
+      "poster": "simulation/play-stacking-toy-complete.jpg",
+      "videoPoster": "simulation/play-stacking-toy-complete.jpg",
+      "playbackRate": 1,
+      "recordingNote": "Successful complete trajectory",
+      "cameraNames": [
+        "HEAD",
+        "LEFT WRIST",
+        "RIGHT WRIST"
+      ]
+    },
+    {
+      "id": "plug-in-charger",
+      "title": "Plug in charger",
+      "property": "",
+      "sources": [
+        "simulation/plug-in-charger-complete.mp4",
+        null,
+        null
+      ],
+      "trace": null,
+      "poster": "simulation/plug-in-charger-complete.jpg",
+      "videoPoster": "simulation/plug-in-charger-complete.jpg",
+      "playbackRate": 1,
+      "recordingNote": "Successful complete trajectory",
+      "cameraNames": [
+        "HEAD",
+        "LEFT WRIST",
+        "RIGHT WRIST"
+      ]
+    },
+    {
+      "id": "build-tower",
+      "title": "Build tower",
+      "property": "",
+      "sources": [
+        "simulation/build-tower-complete.mp4",
+        null,
+        null
+      ],
+      "trace": null,
+      "poster": "simulation/build-tower-complete.jpg",
+      "videoPoster": "simulation/build-tower-complete.jpg",
+      "playbackRate": 1,
+      "recordingNote": "Successful complete trajectory",
+      "cameraNames": [
+        "HEAD",
+        "LEFT WRIST",
+        "RIGHT WRIST"
+      ]
+    },
+    {
+      "id": "pour-liquid-into-cup",
+      "title": "Pour liquid into cup",
+      "property": "",
+      "sources": [
+        "simulation/pour-liquid-into-cup-complete.mp4",
+        null,
+        null
+      ],
+      "trace": null,
+      "poster": "simulation/pour-liquid-into-cup-complete.jpg",
+      "videoPoster": "simulation/pour-liquid-into-cup-complete.jpg",
+      "playbackRate": 1,
+      "recordingNote": "Successful complete trajectory",
       "cameraNames": [
         "HEAD",
         "LEFT WRIST",
