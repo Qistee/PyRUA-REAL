@@ -1,6 +1,5 @@
 # PyRUA-REAL
 
-Research website: https://qistee.github.io/PyRUA-REAL/
+Research website preview: https://qistee.github.io/PyRUA-REAL/
 
-Published with GitHub Pages from the `gh-pages` branch root.
-All page assets, original media, and HLS playlists are included.
+Published from the `gh-pages` branch. This preview includes low-bandwidth introduction clips and adaptive complete recordings. Original high-quality recordings remain available to the expanded player.
